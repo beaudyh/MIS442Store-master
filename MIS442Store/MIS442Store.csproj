@@ -218,6 +218,7 @@
     </Compile>
     <Compile Include="DataLayer\Repositories\LINQProductRepository.cs" />
     <Compile Include="DataLayer\Repositories\NewsRepository.cs" />
+    <Compile Include="DataLayer\Repositories\ProductCachingRepository.cs" />
     <Compile Include="DataLayer\Repositories\ProductRepository.cs" />
     <Compile Include="DataLayer\Repositories\RegistrationRepository.cs" />
     <Compile Include="DataLayer\Repositories\StateRepository.cs" />
@@ -246,6 +247,7 @@
     <None Include="MyDatabase.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="images\1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -304,9 +306,11 @@
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\Add.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
-    <Content Include="Views\Registration\Index.cshtml" />
-    <Content Include="Views\Registration\AddRegistration.cshtml" />
+    <Content Include="Views\Product\Registration\Index.cshtml" />
+    <Content Include="Views\Product\Registration\AddRegistration.cshtml" />
     <Content Include="Views\Shared\MISLayout.cshtml" />
+    <Content Include="Views\Product\ViewProduct.cshtml" />
+    <Content Include="Views\Product\_ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

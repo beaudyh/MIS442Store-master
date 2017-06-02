@@ -11,7 +11,7 @@ namespace MIS442Store.DataLayer.Repositories
     public class LINQProductRepository : IProductRepository
     {
         private MIS442DBDataContext _DataContext = new MIS442DBDataContext();
-        public Product Get(int id)
+        public virtual Product Get(int id)
         {
             Product product = null;
             ProductDO productDO = _DataContext.Product_Get(id).SingleOrDefault();
@@ -28,7 +28,7 @@ namespace MIS442Store.DataLayer.Repositories
 
 
         }
-        public List<Product> GetList()
+        public virtual List<Product> GetList()
         {
             List<Product> productList = new List<Product>();
             ISingleResult<ProductDO> productDOs = _DataContext.Product_GetList();
@@ -46,7 +46,7 @@ namespace MIS442Store.DataLayer.Repositories
 
 
         }
-        public void Save(Product product)
+        public virtual void Save(Product product)
         {
             if (product.ProductID == 0)
             {

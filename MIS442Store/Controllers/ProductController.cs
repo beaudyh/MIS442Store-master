@@ -17,7 +17,7 @@ namespace MIS442Store.Controllers
         {
             _Repos = new LINQProductRepository();
         }
-        // GET: Product
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -57,6 +57,14 @@ namespace MIS442Store.Controllers
             }
             _Repos.Save(product);
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [OutputCache(Duration = 300)]
+        public ActionResult ViewProduct(int id)
+        {
+            Product product = _Repos.Get(id);
+            return View(product);
         }
     }
 }

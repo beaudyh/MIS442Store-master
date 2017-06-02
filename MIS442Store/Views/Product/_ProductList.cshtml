@@ -1,0 +1,18 @@
+﻿@using MIS442Store.DataLayer.DataModels
+@model List<Product>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>
+            <div>
+                <img src="~/Images/1.jpg" />
+                    @product.ProductID
+                    <br />
+                    @product.ProductVersion
+                    <br />
+                    @product.ProductReleaseDate
+                </div>
+</li>
+    }
+</ul>
